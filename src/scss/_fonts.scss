@@ -1,0 +1,7 @@
+@import "_mixins/font-face";
+
+@include font-face("Montserrat", "../fonts/Montserrat/MontserratRegular", 400);
+@include font-face("Roboto", "../fonts/Montserrat/MontserratMedium", 500);
+@include font-face("Romul", "../fonts/Romul/Romul", 400);
+
+
