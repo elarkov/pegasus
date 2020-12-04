@@ -21,8 +21,11 @@
     font-family: $romul;
     font-size: 25px;
     text-align: center;
+    @include sm-block {
+      font-size: 15px;
+    }
     @include xs-block {
-      font-size: 16px;
+      font-size: 15px;
     }
     &:after {
       content: '';
@@ -56,7 +59,7 @@
     position: relative;
     height: 235px;
     overflow: hidden;
-    @include xs-block {
+    @include sm-block {
       height: 155px;
     }
     img {

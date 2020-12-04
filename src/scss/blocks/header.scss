@@ -181,6 +181,7 @@
     }
     @include sm-block { 
       width: 120px;
+      padding: 6px 3px;
       font-size: 11px;
     }
   }
@@ -189,8 +190,18 @@
     position: relative;
     right: 0;
     margin: auto;
+    justify-content: space-around;
     @include xs-block {
       display: flex;
+      width: 100%;
+      margin-top: 20px;
+    }
+    .orders__button {
+      @include xs-block {
+        width: 140px;
+        padding: 6px 5px;
+        font-size: 10px;
+      }
     }
   }
 }
