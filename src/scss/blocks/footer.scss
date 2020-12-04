@@ -1,0 +1,231 @@
+.main-footer {
+  position: relative;
+  z-index: 10;
+  background: #000000;
+  padding-top: 31px;
+  padding-bottom: 33px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  // &:before {
+  //   content: '';
+  //   position: absolute;
+  //   width: 100%;
+  //   height: 100%;
+  //   top: 0;
+  //   left: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   z-index: 1;
+  //   background: #000000;
+  //   opacity: 0.8;
+  // }
+  
+}
+
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  &__item {
+    position: relative;
+    @include col();
+    flex: 1;
+    &:after {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: 11px;
+      width: 1px;
+      height: 132px;
+      background-color: #848485;
+      @include sm-block {
+        display: none;
+      }
+    }
+    &:first-child {
+      width: 20%;
+      @include sm-block {
+        width: auto;
+      }
+      @include xs-block {
+        width: 100%;
+      }
+    }
+    &:nth-child(2) {
+      padding-left: 74px;
+      width: 29%;
+      @include sm-block {
+        padding-left: 20px;
+      }
+      @include xm-block {
+        padding-left: 0;
+      }
+      @include xs-block {
+        width: 100%;
+      }
+    }
+    &:nth-child(3) {
+      width: 26%;
+      padding-left: 74px;
+      @include sm-block {
+        padding-left: 20px;
+      }
+      @include xm-block {
+        padding-left: 0;
+      }
+      @include xs-block {
+        width: 100%;
+      }
+      &:after {
+        height: 90%;
+        @include sm-block {
+          display: none;
+        }
+      }
+    }
+    &:last-child {
+      width: 245px;
+      text-align: right;
+      @include sm-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 40px;
+      }
+      @include xs-block {
+        margin-top: 20px;
+      }
+      &:after {
+        display: none;
+      }
+    }
+    @include sm-block {
+      @include size(3);
+      flex: auto;
+    }
+    @include xs-block {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  &__title {
+    position: relative;
+    margin-bottom: 32px;
+    padding-bottom: 15px;
+    font-family: $romul;
+    font-weight: normal;
+    color: #ffffff;
+    text-transform: uppercase;
+    @include xm-block {
+      font-size: 15px;
+    }
+    @include xs-block {
+      margin-bottom: 15px;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 68px;
+      height: 2px;
+      background: $accent;
+    }
+  }
+  &__link {
+    display: block;
+    font-size: 16px;
+    font-weight: normal;
+    text-decoration: none;
+    color: #a3a3a2;
+    white-space: nowrap;
+    transition: all linear .2s;
+    @include xm-block {
+      font-size: 14px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &:hover {
+      color: #ffffff;
+    }
+  }
+  &__btn {
+    width: 186px;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 6px 10px 0;
+    width: 182px;
+    margin-left: auto;
+    border: 0;
+    border-bottom: 2px solid #ffffff;
+    color: #ffffff;
+    @include sm-block {
+      margin-left: 0;
+    }
+    &:first-child {
+      margin-bottom: 6px;
+    }
+    &:hover {
+      color: #9f9e9d;
+      border-color: #9f9e9d;
+      background: transparent;
+    }
+  }
+}
+
+.info {
+  width: 180px;
+  margin-top: 16px;
+  margin-left: auto;
+  padding: 10px 20px 3px;
+  background: #3a3836;
+  @include sm-block {
+    margin-left: 0;
+  }
+  &__phone {
+    font-size: 15px;
+    font-weight: 600;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  &__text {
+    font-size: 9px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #9a9a9a;
+  }
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  &__link {
+    display: block;
+    margin-right: 12px;
+    color: #595959;
+    transition: all linear .2s;
+    &:last-child {
+      margin-right: 0;
+    }
+    svg {
+      fill: #979796;
+      width: 28px;
+      height: 28px;
+      transition: all linear .2s;
+    }
+    &:hover {
+      svg {
+        fill: $accent;
+      }
+    }
+  }
+}
+
+.copy {
+  margin-top: 60px;
+  color: #595959;
+  font-size: 12px;
+}

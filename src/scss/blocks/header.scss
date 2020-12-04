@@ -1,0 +1,196 @@
+.header {
+  padding-top: 26px;
+  @include md-block {
+    padding-top: 15px;
+    margin-bottom: 20px;
+  }
+  @include xs-block {
+    padding-top: 0;
+    margin-bottom: 0;
+  }
+  &__container {
+    padding: 0;
+  }
+  &__wrapper {
+    position: relative;
+    height: 87px;
+    padding-top: 28px;
+    padding-left: 15px;
+    padding-right: 15px;
+    @include md-block {
+      height: 120px;
+    }
+    @include xs-block {
+      height: 90px;
+    }
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 533px;
+      height: 1px;
+      background: $text;
+      @include xl-block {
+        width: 460px;
+      }
+      @include md-block {
+        display: none;
+      }
+    }
+    &:before {
+      left: 0;
+    }
+    &:after {
+      right: 0;
+    }
+  }
+}
+
+.contacts {
+  position: absolute;
+  left: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 370px;
+  @include xl-block {
+    width: 345px;
+  }
+  @include md-block {
+    width: 320px;
+    bottom: 0;
+  }
+  @include sm-block {
+    width: 300px;
+  }
+  @include xm-block {
+    width: 245px;
+  }
+  @include xs-block {
+    display: none;
+  }
+  &__number {
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    color: $text;
+    white-space: nowrap;
+    @include sm-block {
+      font-size: 14px;
+    }
+    @include xm-block {
+      font-size: 12px;
+    }
+  }
+  &__text {
+    position: relative;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #d0aa8c;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 40%;
+      right: -35px;
+      transform: translate(-50%, -50%);
+      width: 39px;
+      height: 1px;
+      background-color: #d0aa8c;
+      @include sm-block {
+        top: 50%;
+        width: 30px;
+      }
+      @include xm-block { 
+        width: 20px;
+      }
+    }
+  }
+}
+
+.logo {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @include md-block {
+    width: 170px;
+    top: 20%;
+  }
+  @include xs-block {
+    top: 50%;
+  }
+  &:before,
+  &:after {
+    display: none;
+    @include md-block {
+      display: block;
+      content: '';
+      position: absolute;
+      display: inline-block;
+      vertical-align: middle;
+      width: 100%;
+      top: 50%;
+      //left: 50%;
+      transform: translate(-50%, -50%);
+      //width: 533px;
+      height: 1px;
+      background: $text;
+    }
+    @include xs-block {
+      display: none;
+    }
+  }
+  &:after {
+    margin-right: -100%;
+    right: -100px;
+  }
+  &:before {
+    margin-left: -100%;
+    left: 70px;
+  }
+}
+
+.orders {
+  position: absolute;
+  right: 15px;
+  width: 397px;
+  display: flex;
+  justify-content: space-between;
+  @include xl-block {
+    width: 360px;
+  }
+  @include md-block {
+    width: 320px;
+    bottom: 0;
+  }
+  @include sm-block {
+    width: 255px;
+  }
+  @include xs-block {
+    display: none;
+  }
+  &__button {
+    width: 185px;
+    @include xl-block {
+      width: 170px;
+    }
+    @include md-block {
+      width: 150px;
+      padding: 6px 10px;
+    }
+    @include sm-block { 
+      width: 120px;
+      font-size: 11px;
+    }
+  }
+  &--mob {
+    display: none;
+    position: relative;
+    right: 0;
+    margin: auto;
+    @include xs-block {
+      display: flex;
+    }
+  }
+}

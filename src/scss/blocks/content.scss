@@ -1,0 +1,19 @@
+.content {
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+
+.text-block {
+  max-width: 730px;
+  text-align: center;
+  margin: auto;
+  font-size: 13px;
+  line-height: 17px;
+  p {
+    margin-bottom: 17px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

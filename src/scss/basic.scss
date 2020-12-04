@@ -13,13 +13,21 @@
 }
 
 .button {
-	display: inline-block;
+  display: inline-block;
+  padding: 6px 25px;
   font-family: $default-font;
+  font-size: 12px;
+  font-weight: 600;
   text-align: center;
-  border: 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 1px solid rgb(47, 44, 52);
   cursor: pointer;
-}
-
-p {
-  font-family: $romul;
+  color: $text;
+  transition: all linear .2s;
+  &:hover {
+    background: $accent;
+    color: #ffffff;
+    border-color: $accent;
+  }
 }

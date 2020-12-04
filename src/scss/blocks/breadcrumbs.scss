@@ -1,0 +1,31 @@
+.breadcrumbs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 23px;
+  padding: 3px 0 7px;
+  border-bottom: 1px solid #e8e9e9;
+  li + li::before {
+    content: '–';
+    display: inline-block;
+    padding: 0 5px;
+    color: $text;
+    transform: rotate(90deg);
+    position: relative;
+    top: 3px;
+  }
+  li+li:hover:before {
+    color: $accent;
+  }
+  li:hover {
+    a {
+      color: $accent;
+    }
+  }
+  &__link {
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $text;
+  }
+}

@@ -1,0 +1,49 @@
+.s-title {
+  margin-bottom: 16px;
+  text-align: center;
+  &__sub {
+    font-size: 18px;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: $text;
+    @include xs-block {
+      font-size: 14px;
+    }
+  }
+  &__header {
+    margin-top: -5px;
+    font-family: $romul;
+    font-size: 37px;
+    text-align: center;
+    color: $text;
+    overflow: hidden;
+    @include xs-block {
+      font-size: 28px;
+    }
+    span {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    &:before,
+    &:after {
+      position: relative;
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      width: 80px;
+      height: 2px;
+      background: $accent;
+      @include xs-block {
+        width: 50px;
+      }
+    }
+    &:before {
+      margin-left: -100%;
+      left: -14px;
+    }
+    &:after {
+      margin-right: -100%;
+      right: -14px;
+    }
+  }
+}

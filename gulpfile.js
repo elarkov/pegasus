@@ -109,9 +109,6 @@ function grid(done) {
 			xs: {
 				width: "576px"
 			},
-			xxs: {
-				width: "360px"
-			}
 		},
 	};
 	smartgrid('src/scss', settings);

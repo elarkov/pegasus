@@ -5,7 +5,7 @@
 }
 
 /* Убираем внутренние отступы только для элементов у которых есть классы */
-ul[class],
+ul,
 ol[class] {
   padding: 0;
 }
@@ -17,7 +17,7 @@ h2,
 h3,
 h4,
 p,
-ul[class],
+ul,
 ol[class],
 li,
 figure,
@@ -38,6 +38,10 @@ body {
   scroll-behavior: smooth;
   overflow-x: hidden;
   color: $text;
+  // background-image: url('../img/1.png');
+  // background-position: center top;
+  // background-repeat: no-repeat;
+  // opacity: 0.5;
 }
 
 /* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/

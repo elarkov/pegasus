@@ -6,7 +6,6 @@ $break_md: 1024px;
 $break_sm: 768px;
 $break_xm: 640px;
 $break_xs: 576px;
-$break_xxs: 360px;
 
 $offset: 10px;
 $offset_xl: $offset;
@@ -14,7 +13,6 @@ $offset_md: $offset;
 $offset_sm: $offset;
 $offset_xm: $offset;
 $offset_xs: $offset;
-$offset_xxs: $offset;
 
 $offset_one_side: ($offset / 2);
 $offset_xl_one_side: ($offset_xl / 2);
@@ -22,7 +20,6 @@ $offset_md_one_side: ($offset_md / 2);
 $offset_sm_one_side: ($offset_sm / 2);
 $offset_xm_one_side: ($offset_xm / 2);
 $offset_xs_one_side: ($offset_xs / 2);
-$offset_xxs_one_side: ($offset_xxs / 2);
 
 $fields: 15px;
 
@@ -110,11 +107,6 @@ $fields: 15px;
 @mixin size-xs($n){
     $val: 100% / $columns * $n;
     @include xs(width, #{calc(#{$val} - #{$offset_xs})});
-}
-
-@mixin size-xxs($n){
-    $val: 100% / $columns * $n;
-    @include xxs(width, #{calc(#{$val} - #{$offset_xxs})});
 }
 
 @mixin shift($n){
@@ -309,38 +301,6 @@ $fields: 15px;
     @include xs(padding-right, #{calc(#{$val} + #{$offset_xs_one_side})});
 }
 
-@mixin shift-xxs($n){
-    $val: 100% / $columns * $n;
-    @include xxs(margin-left, #{calc(#{$val} + #{$offset_xxs_one_side})});
-    @include xxs(margin-right, #{calc(#{$val} + #{$offset_xxs_one_side})});
-}
-
-@mixin shift-xxs-left($n){
-    $val: 100% / $columns * $n;
-    @include xxs(margin-left, #{calc(#{$val} + #{$offset_xxs_one_side})});
-}
-
-@mixin shift-xxs-right($n){
-    $val: 100% / $columns * $n;
-    @include xxs(margin-right, #{calc(#{$val} + #{$offset_xxs_one_side})});
-}
-
-@mixin shift-xxs-padding($n){
-    $val: 100% / $columns * $n;
-    @include xxs(padding-left, #{calc(#{$val} + #{$offset_xxs_one_side})});
-    @include xxs(padding-right, #{calc(#{$val} + #{$offset_xxs_one_side})});
-}
-
-@mixin shift-xxs-padding-left($n){
-    $val: 100% / $columns * $n;
-    @include xxs(padding-left, #{calc(#{$val} + #{$offset_xxs_one_side})});
-}
-
-@mixin shift-xxs-padding-right($n){
-    $val: 100% / $columns * $n;
-    @include xxs(padding-right, #{calc(#{$val} + #{$offset_xxs_one_side})});
-}
-
 @mixin xl($name, $value){
     @media screen and (max-width: $break_xl){
         #{$name}: $value;
@@ -397,18 +357,6 @@ $fields: 15px;
 
 @mixin xs-block(){
     @media screen and (max-width: $break_xs){
-        @content;
-    }
-}
-
-@mixin xxs($name, $value){
-    @media screen and (max-width: $break_xxs){
-        #{$name}: $value;
-    }
-}
-
-@mixin xxs-block(){
-    @media screen and (max-width: $break_xxs){
         @content;
     }
 }
